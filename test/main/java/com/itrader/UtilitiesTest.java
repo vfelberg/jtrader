@@ -107,7 +107,6 @@ public class UtilitiesTest {
 	
 	@Test
 	public void testIteration() {
-		// iterable
 		Collection<Integer> collection = new ArrayList<>();
 		for (int i = -50; i <= 100; i += 2) {
 			collection.add(i);
