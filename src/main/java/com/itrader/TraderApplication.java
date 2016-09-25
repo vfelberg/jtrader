@@ -7,7 +7,7 @@ public class TraderApplication {
     public static void main(String[] args) {
         MarketScanner scanner = new MarketScanner();
         scanner.setScanPeriodMillis(10000);
-        scanner.setScanResultListener(new ScanResultListener());
+        scanner.addScanResultListener(new ScanResultListener());
         scanner.startScanning();
     }
 }
