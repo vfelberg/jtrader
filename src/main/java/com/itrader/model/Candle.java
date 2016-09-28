@@ -1,10 +1,14 @@
 package com.itrader.model;
 
+import java.util.Date;
+
 public class Candle {
 	private float open;
 	private float close;
 	private float high;
 	private float low;
+    private Date date;
+    private int volume;
 
 	public float getOpen() {
 		return open;
@@ -38,7 +42,23 @@ public class Candle {
 		this.low = low;
 	}
 
-	public boolean lessThanOrEqual(Candle otherCandle) {
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public boolean lessThanOrEqual(Candle otherCandle) {
 		return close <= otherCandle.close;
 	}
 
