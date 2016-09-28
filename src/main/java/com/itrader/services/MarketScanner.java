@@ -48,6 +48,8 @@ public class MarketScanner {
     }
 
     private ScanResult scanProvider(PriceProvider priceProvider) {
-        return new ScanResult();
+        ScanResult scanResult = new ScanResult();
+        scanResult.setCandles(priceProvider.getPrices());
+        return scanResult;
     }
 }
